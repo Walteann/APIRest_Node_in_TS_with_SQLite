@@ -49,10 +49,16 @@
 * [express-async-errors](https://www.npmjs.com/package/express-async-errors): _o express ele não trata exeção com isso vai facilitar a manipular os errors_
 * [typeorm](https://typeorm.io/#/): _vai facilitar a mapear objetos para o banco de dados usando javascript_
 * [multer](https://www.npmjs.com/package/multer): _Multer é um middleware node.js para lidar com multipart / form-data, que é usado principalmente para fazer upload de arquivos. É escrito no topo do busboy para máxima eficiência._ 
-*[sqlite3](https://www.npmjs.com/package/sqlite3): _Banco de dados relacional embutido_
-*[yup](https://www.npmjs.com/package/yup): _é um construtor de esquema JavaScript para análise e validação de valor_
+* [sqlite3](https://www.npmjs.com/package/sqlite3): _Banco de dados relacional embutido_
+* [yup](https://www.npmjs.com/package/yup): _é um construtor de esquema JavaScript para análise e validação de valor_
 
-## server.ts
+## Diretorio src
+
+<p align="center">
+    <img src="./images-redme/diretorio-src.PNG">
+</p>
+
+### server.ts
 
 ```
     import express from 'express';
