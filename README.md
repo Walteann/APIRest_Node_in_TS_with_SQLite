@@ -82,3 +82,85 @@
 
     app.listen(3333); // faz a API ouvir a porta 3333 e fica disponivel
 ```
+
+
+Autenticção JWT
+
+Criando tabela usuario no banco usando typeorm
+
+typeorm migration:create -n create_users
+
+então ele vai gerar uma migration de users
+
+lá contem como vai ser o a tabela users
+
+```
+
+  await queryRunner.createTable(new Table({
+            name: 'users', // Nome da tabela
+            columns: [
+                {
+                    name: 'id',
+                    type: 'integer',
+                    unsigned: true,
+                    isPrimary: true,
+                    isGenerated: true,
+                    generationStrategy: 'uuid' // Teste Meu, quero gerar id do tipo uuid
+                },
+                {
+                    name: 'email',
+                    type: 'varchar'
+                },
+                {
+                    name: 'password',
+                    type: 'varchar'
+                },
+                {
+                    name: 'created_at',
+                    type: 'date',
+                    default: Date.now() // teste Meu , a data sempre enviar a data atual.
+                }
+            ]
+        }));
+
+
+```
+
+Vamos criar um Model 
+
+```
+  import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+
+
+@Entity('users')
+export default class User {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
+    email: string;
+    
+    @Column()
+    password: string;
+    
+    @Column()
+    created_at: number;
+}
+
+```
+
+Cria o controller 
+
+
+```
+  // Colocar aqui o controller
+
+
+```
+
+Alterar as Rotas
+
+```
+// colocar aqui as rotas
+```
